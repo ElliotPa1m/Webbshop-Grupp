@@ -1,3 +1,11 @@
+body{
+    background-color: #343434;
+}
+
+.om-oss-text{
+    color: #fff;
+}
+
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -6,14 +14,14 @@ input[type=text], select, textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize:vertical
+    
 }
 
 input[type=submit] {
     background-color: #343434;
-    color: #111111;
+    color: #fff;
     padding: 12px 20px;
-    border: none;
+    border: solid #696969;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -26,4 +34,8 @@ input[type=submit]:hover {
     border-radius: 5px;
     background-color: #343434;
     padding: 20px;
+}
+
+label{
+    color: #fff;
 }
