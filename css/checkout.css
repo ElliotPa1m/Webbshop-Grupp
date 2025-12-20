@@ -16,6 +16,7 @@ section {
 
 .items {
     background-color: #343434;
+    max-width: 700px;
 }
 
 .items div {
