@@ -17,17 +17,29 @@ div {
     border: white solid 1px;
     margin-bottom: 20px;
     padding: 20px;
+    border-radius: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+
 }
 
 .items {
-    background-color: #343434;
     max-width: 700px;
 }
 
 .items div {
+    background-color: #343434;
     border: white solid 1px;
     margin-bottom: 10px;
     padding: 10px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .discount-code {
