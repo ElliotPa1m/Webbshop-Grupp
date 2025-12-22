@@ -1,11 +1,81 @@
 body{
-    background-color: #343434;
+    background-color: #111111;
+    font-family: "Inter", sans-serif;
 }
 
 .om-oss-text{
     color: #fff;
 }
 
+.line{
+    border-bottom: 1px solid #343434;
+}
+
+.container1, .container2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+
+h5{
+    text-decoration: underline #fff;
+    text-decoration-thickness: 2px;
+    text-align: center;
+}
+
+.business{
+    border: solid #343434;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    height: 175px;
+    width: 300px;
+}
+
+.elliot{
+    border: solid #343434;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    height: 175px;
+    width: 300px;
+}
+
+.sara{
+    border: solid #343434;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    height: 175px;
+    width: 300px;
+}
+
+.hampus{
+    border: solid #343434;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    height: 175px;
+    width: 300px;
+}
+
+.viktor{
+    border: solid #343434;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    height: 175px;
+    width: 300px;
+}
+
+.oscar {
+    border: solid #343434;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    height: 175px;
+    width: 300px;
+}
+
+#page-container{
+    margin: 0 auto;
+    width: 60%;
+}
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -14,9 +84,12 @@ input[type=text], select, textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
+    text-align: center;
     
 }
-
+*{
+    box-sizing: border-box;
+}
 input[type=submit] {
     background-color: #343434;
     color: #fff;
@@ -32,10 +105,26 @@ input[type=submit]:hover {
 
 .contact-us {
     border-radius: 5px;
-    background-color: #343434;
-    padding: 20px;
+    background-color: #111111;
+    text-align: center;
 }
 
 label{
     color: #fff;
+}
+
+
+/* small desktop */
+@media screen and (max-width: 1200px) {
+
+}
+
+/* tablet */
+@media screen and (max-width: 960px) and (min-width: 767px) {
+
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
 }
