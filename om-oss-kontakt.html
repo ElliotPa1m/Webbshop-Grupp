@@ -3,36 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="om-oss-kontakt.css">
+    <link rel="stylesheet" href="css/om-oss-kontakt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Om oss</title>
 </head>
 <body>
+    <div id="container">
+        <div id="page-container">
+            <div class="om-oss-text">
+                <h1>Om oss</h1>
+
+                <hr class="line">
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h5>Företaget!</h5>
+
+                    <p>Pixelhuset skapades av en grupp <br>vänner i December 2025. Då dom <br>tyckte att det saknades en <br>hemsida för att köpa spel lätt och <br>säkert</p>
+                </div>
+            
+                <div class="card">
+                    <h5>Elliot Pedersen Palm</h5>
+
+                    <p>Elliot är en man från en liten stad som heter Laholm, 26 år gammal och studerar till Fullstack Utvecklare men spelar på fritiden.</p>
+                </div>
+
+                <div class="card">
+                    <h5> Sara Nylander</h5>
+
+                    <p>Sara är 35 år och bor i Stockholm. Att hon inte spelar spel spelar ingen roll, för så länge användarna är nöjda är hon det också.</p>
+                </div>
+
+                <div class="card">
+                    <h5>Hampus Andersson</h5>
+
+                    <p>Hampus är 24 år från Varberg. Gillar att arbeta strukturerat och lösa problem. På fritiden blir det mest sport och spel.</p>
+                </div>
+
+                <div class="card">
+                    <h5>Viktor Lindqvist</h5>
+
+                    <p>Viktor är 24 år från Trollhättan. Har ett stort intresse för spel i alla kategorier och driver för tillfället en av Sveriges största spelservrar inom FiveM</p>
+                </div>
+
+                <div class="card">
+                    <h5>Oscar Wersäll</h5>
+
+                    <p>Oscar är 38 år från Stockholm och gillar snabba lösningar, hård optimering och att alltid spela för vinst - oavsett om det handlar om kod eller att levla upp i Fortnite</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-us">
+            <form action="action_page.php">
+
+                <label for="fname">Förnamn</label>
+                <input type="text" id="fnamn" name="firstname" placeholder="Ditt förnamn">
+
+                <label for="lname">Efternamn</label>
+                <input type="text" id="lnamn" name="lastname" placeholder="Ditt efternamn">
+
+                <label for="email">Email-adress</label>
+                <input type="text" id="email" name="email" placeholder="Din email">
+
+                <label for="subject">Innehåll</label>
+                <textarea id="subject" name="subject" placeholder="Skriv ditt meddelande" style="height: 200px;"></textarea>
+
+                <input type="submit" value="Skicka">
+
+            </form>
+        </div>
     
-    <h1>Om oss</h1>
-
-    <h5>Företaget!</h5>
-
-    <p>Pixelhuset skapades av en grupp <br>vänner i December 2025. Då dom <br>tyckte att det saknades en <br>hemsida för att köpa spel lätt och <br>säkert</p>
-
-    <h5>Elliot Pedersen Palm</h5>
-
-    <p>Elliot är en man från en liten stad <br> som heter Laholm, 26 år gammal<br> och studerar till Fullstack<br> Utvecklare men spelar på fritiden.</p>
-
-    <h5> Sara Nylander</h5>
-
-    <p>Sara är ... Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-    <h5>Hampus Andersson</h5>
-
-    <p>Hampus är ... Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-    <h5>Viktor Lindqvist</h5>
-
-    <p>Viktor är ... Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-    <h5>Oscar Wersäll</h5>
-
-    <p>Oscar är ... Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
+    </div>
 </body>
 </html>

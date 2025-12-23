@@ -1,0 +1,132 @@
+body {
+  background-color: #111111;
+  font-family: "Inter", sans-serif;
+}
+
+.om-oss-text {
+  color: #fff;
+}
+
+.line {
+  border-bottom: 1px solid #343434;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}
+
+h5 {
+  text-decoration: underline #fff;
+  text-decoration-thickness: 2px;
+  text-align: center;
+}
+
+.card {
+  border: solid #343434;
+  border-radius: 5px;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  height: 175px;
+  width: 300px;
+  color: #fff;
+}
+
+#container {
+  margin: 0 auto;
+  width: 60%;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #343434;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  background-color: #343434;
+  color: #fff;
+  padding: 12px 20px;
+  border: solid #696969;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #696969;
+}
+
+.contact-us {
+  border-radius: 5px;
+  background-color: #111111;
+  text-align: center;
+}
+
+label {
+  color: #fff;
+}
+
+/*large desktop*/
+@media screen and (min-width: 1516px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-self: center;
+  }
+}
+
+/* small desktop */
+@media screen and (max-width: 1515px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-self: center;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 1020px) and (min-width: 700px) {
+  #container {
+    width: 80%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-self: center;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 699px) {
+  #container {
+    width: 90%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-self: center;
+  }
+}
