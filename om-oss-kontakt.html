@@ -10,73 +10,79 @@
     <title>Om oss</title>
 </head>
 <body>
-    <div id="container">
-        <div id="page-container">
-            <div class="om-oss-text">
-                <h1>Om oss</h1>
 
-                <hr class="line">
+    <header></header>
+
+        <div id="container">
+            <div id="page-container">
+                <div class="om-oss-text">
+                    <h1>Om oss</h1>
+
+                    <hr class="line">
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <h5>Företaget!</h5>
+
+                        <p>Pixelhuset skapades av en grupp <br>vänner i December 2025. Då dom <br>tyckte att det saknades en <br>hemsida för att köpa spel lätt och <br>säkert</p>
+                    </div>
+                
+                    <div class="card">
+                        <h5>Elliot Pedersen Palm</h5>
+
+                        <p>Elliot är en man från en liten stad som heter Laholm, 26 år gammal och studerar till Fullstack Utvecklare men spelar på fritiden.</p>
+                    </div>
+
+                    <div class="card">
+                        <h5> Sara Nylander</h5>
+
+                        <p>Sara är 35 år och bor i Stockholm. Att hon inte spelar spel spelar ingen roll, för så länge användarna är nöjda är hon det också.</p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Hampus Andersson</h5>
+
+                        <p>Hampus är 24 år från Varberg. Gillar att arbeta strukturerat och lösa problem. På fritiden blir det mest sport och spel.</p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Viktor Lindqvist</h5>
+
+                        <p>Viktor är 24 år från Trollhättan. Har ett stort intresse för spel i alla kategorier och driver för tillfället en av Sveriges största spelservrar inom FiveM</p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Oscar Wersäll</h5>
+
+                        <p>Oscar är 38 år från Stockholm och gillar snabba lösningar, hård optimering och att alltid spela för vinst - oavsett om det handlar om kod eller att levla upp i Fortnite</p>
+                    </div>
+                </div>
+
             </div>
-            <div class="cards">
-                <div class="card">
-                    <h5>Företaget!</h5>
 
-                    <p>Pixelhuset skapades av en grupp <br>vänner i December 2025. Då dom <br>tyckte att det saknades en <br>hemsida för att köpa spel lätt och <br>säkert</p>
-                </div>
-            
-                <div class="card">
-                    <h5>Elliot Pedersen Palm</h5>
+            <div class="contact-us">
+                <form action="action_page.php">
 
-                    <p>Elliot är en man från en liten stad som heter Laholm, 26 år gammal och studerar till Fullstack Utvecklare men spelar på fritiden.</p>
-                </div>
+                    <label for="fname">Förnamn</label>
+                    <input type="text" id="fnamn" name="firstname" placeholder="Ditt förnamn">
 
-                <div class="card">
-                    <h5> Sara Nylander</h5>
+                    <label for="lname">Efternamn</label>
+                    <input type="text" id="lnamn" name="lastname" placeholder="Ditt efternamn">
 
-                    <p>Sara är 35 år och bor i Stockholm. Att hon inte spelar spel spelar ingen roll, för så länge användarna är nöjda är hon det också.</p>
-                </div>
+                    <label for="email">Email-adress</label>
+                    <input type="text" id="email" name="email" placeholder="Din email">
 
-                <div class="card">
-                    <h5>Hampus Andersson</h5>
+                    <label for="subject">Innehåll</label>
+                    <textarea id="subject" name="subject" placeholder="Skriv ditt meddelande" style="height: 200px;"></textarea>
 
-                    <p>Hampus är 24 år från Varberg. Gillar att arbeta strukturerat och lösa problem. På fritiden blir det mest sport och spel.</p>
-                </div>
+                    <input type="submit" value="Skicka">
 
-                <div class="card">
-                    <h5>Viktor Lindqvist</h5>
-
-                    <p>Viktor är 24 år från Trollhättan. Har ett stort intresse för spel i alla kategorier och driver för tillfället en av Sveriges största spelservrar inom FiveM</p>
-                </div>
-
-                <div class="card">
-                    <h5>Oscar Wersäll</h5>
-
-                    <p>Oscar är 38 år från Stockholm och gillar snabba lösningar, hård optimering och att alltid spela för vinst - oavsett om det handlar om kod eller att levla upp i Fortnite</p>
-                </div>
+                </form>
             </div>
-
+        
         </div>
 
-        <div class="contact-us">
-            <form action="action_page.php">
+    <footer></footer>
 
-                <label for="fname">Förnamn</label>
-                <input type="text" id="fnamn" name="firstname" placeholder="Ditt förnamn">
-
-                <label for="lname">Efternamn</label>
-                <input type="text" id="lnamn" name="lastname" placeholder="Ditt efternamn">
-
-                <label for="email">Email-adress</label>
-                <input type="text" id="email" name="email" placeholder="Din email">
-
-                <label for="subject">Innehåll</label>
-                <textarea id="subject" name="subject" placeholder="Skriv ditt meddelande" style="height: 200px;"></textarea>
-
-                <input type="submit" value="Skicka">
-
-            </form>
-        </div>
-    
-    </div>
 </body>
 </html>
