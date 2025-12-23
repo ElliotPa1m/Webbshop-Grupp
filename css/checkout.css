@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    background-color: #111111;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+section {
+    border: white solid 1px;
+}
+
+div {
+    border: white solid 1px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.items {
+    max-width: 700px;
+}
+
+.items div {
+    background-color: #343434;
+    border: white solid 1px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.discount-code {
+    background-color: #696969;
+}
+
+.total-price {
+    background-color: #696969;
+}
