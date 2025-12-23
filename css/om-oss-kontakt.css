@@ -27,6 +27,7 @@ h5 {
 
 .card {
   border: solid #343434;
+  border-radius: 5px;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
   height: 175px;
