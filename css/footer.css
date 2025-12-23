@@ -3,6 +3,11 @@ body {
   background-color: #111111;
 }
 
+#copyright {
+  color: #fff;
+  text-align: center;
+}
+
 img {
   height: 100px;
   width: 150px;
