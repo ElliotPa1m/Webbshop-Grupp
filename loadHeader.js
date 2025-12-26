@@ -9,10 +9,10 @@ fetch('header.html')
     });
   });
 /* Användning:
-    <header></header> <-- Innehållet från header.html kommer att laddas här -->
+    <header></header>
 
     <main>  </main>
 
     <script src="headerBehavior.js"></script>
-    <script src="loadHeader.js"></script> <-- Placera detta i slutet av body -->
+    <script src="loadHeader.js"></script> 
 */
