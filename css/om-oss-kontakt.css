@@ -53,6 +53,7 @@ textarea {
 }
 * {
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 input[type="submit"] {
   background-color: #343434;
@@ -71,6 +72,11 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #111111;
   text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #fff;
 }
 
 label {
