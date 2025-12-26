@@ -5,7 +5,7 @@
     <nav>
         <ul class="main-nav">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Spel</a>
+                <a href="#" class="dropdown-toggle">Upptäck spel</a>
                 <div class="dropdown-menu">
                     <div class="dropdown-items">
                         <a href="#"><strong>Populära</strong></a>
@@ -29,8 +29,15 @@
         </ul>
     </nav>
     <div id="header-actions">
-        <input type="text" placeholder="Value" class="search-input" />
-        <button class="search-btn">&#128269;</button>
+        <div class="search-bar">
+                        <input type="text" placeholder="Sök produkter..." class="search-input" />
+                        <button class="search-btn" aria-label="Sök">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+                                    <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                        </button>
+        </div>
         <button class="kassa-btn">Kassa</button>
     </div>
 </div>

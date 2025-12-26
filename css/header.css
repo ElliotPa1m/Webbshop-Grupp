@@ -1,11 +1,8 @@
 header * {
     box-sizing: border-box;
     margin: 0;
-}
-header * {
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    font-family: var(--font-family);
 }
 header {
     width: 100vw;
@@ -20,7 +17,6 @@ header #header-container {
     color: var(--text-color);
     padding: 1rem 2rem;
     flex-wrap: wrap;
-    font-family: var(--font-family);
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +31,6 @@ header #logo {
     color: var(--text-color);
     font-weight: bold;
     font-size: 1.5rem;
-    font-family: var(--font-family);
 }
 header #logo img {
     height: 48px;
@@ -59,7 +54,6 @@ header .dropdown-toggle {
     color: var(--text-color);
     font-size: 1rem;
     cursor: pointer;
-    font-family: var(--font-family);
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
@@ -125,25 +119,55 @@ header #header-actions {
     align-items: center;
     gap: 1rem;
 }
-header .search-input {
-    border-radius: 20px;
-    border: none;
-    padding: 0.5rem 1rem;
-    outline: none;
-    font-family: var(--font-family);
+header .search-bar {
+    display: flex;
+    align-items: center;
     background: var(--background-color);
-    color: var(--text-color);
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    min-width: 220px;
+    max-width: 350px;
+    height: 40px;
+    padding: 0 0.5rem 0 1rem;
 }
-header .search-input::placeholder {
+header .search-bar .search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 0;
+    flex: 1;
+    height: 100%;
+}
+header .search-bar .search-input::placeholder {
     color: var(--secondary-color);
 }
-header .search-btn {
+header .search-bar .search-btn {
     background: none;
     border: none;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+    color: var(--text-color);
+    font-size: 1.3rem;
     cursor: pointer;
-    margin-left: -2.5rem;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .search-bar .search-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+header .search-bar .search-btn:hover {
+    color: var(--accent-color);
 }
 header .kassa-btn {
     background: var(--accent-color);
@@ -153,8 +177,7 @@ header .kassa-btn {
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
     cursor: pointer;
-    font-family: var(--font-family);
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     
 }
