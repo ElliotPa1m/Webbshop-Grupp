@@ -1,8 +1,11 @@
 fetch('header.html')
   .then(response => response.text())
-  .then(data => {
+  .then(html => {
     document.querySelectorAll('header').forEach(header => {
-      header.innerHTML = data;
+      header.innerHTML = html;
+      if (typeof initHeader === 'function') {
+        initHeader(header);
+      }
     });
   });
 /* Användning:
@@ -10,25 +13,6 @@ fetch('header.html')
 
     <main>  </main>
 
+    <script src="headerBehavior.js"></script>
     <script src="loadHeader.js"></script> <-- Placera detta i slutet av body -->
 */
-
-document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('header');
-  if (!header) return;
-
-  const observer = new MutationObserver(function () {
-    const spel = header.querySelector('.dropdown');
-    const dropdownMenu = header.querySelector('.dropdown-menu');
-    if (!spel || !dropdownMenu) return;
-
-    spel.addEventListener('mouseenter', function () {
-      dropdownMenu.classList.add('visible');
-    });
-    header.addEventListener('mouseleave', function () {
-      dropdownMenu.classList.remove('visible');
-    });
-    observer.disconnect();
-  });
-  observer.observe(header, { childList: true, subtree: true });
-});

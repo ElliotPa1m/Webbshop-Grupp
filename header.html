@@ -2,10 +2,10 @@
     <a href="/" id="logo">
         <img src="img/PixelhusetLogo-cropped.svg" alt="Pixelhuset logo" />
     </a>
-    <nav>
+    <nav aria-label="Huvudnavigering">
         <ul class="main-nav">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Upptäck spel</a>
+                <a href="/produkter" class="dropdown-toggle">Upptäck spel</a>
                 <div class="dropdown-menu">
                     <div class="dropdown-items">
                         <a href="#"><strong>Populära</strong></a>
@@ -30,15 +30,70 @@
     </nav>
     <div id="header-actions">
         <div class="search-bar">
-                        <input type="text" placeholder="Sök produkter..." class="search-input" />
-                        <button class="search-btn" aria-label="Sök">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
-                                    <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
-                                    <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                        </button>
+            <input type="text" placeholder="Sök produkter..." class="search-input" />
+            <button class="search-btn" aria-label="Sök">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+                    <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
         </div>
         <button class="kassa-btn">Kassa</button>
+        <button type="button" class="hamburger-btn" aria-label="�ppna meny" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </div>
-
+<div id="mobile-menu" class="mobile-menu" hidden aria-hidden="true">
+    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Mobilmeny" tabindex="-1">
+        <div class="mobile-menu__top">
+            <div class="mobile-menu__meta">
+                <span class="mobile-menu__eyebrow">Pixelhuset</span>
+                <p class="mobile-menu__title">Hitta nya spel</p>
+            </div>
+            <button type="button" class="mobile-close-btn" aria-label="St�ng meny">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="mobile-search-row">
+            <div class="search-bar mobile-search">
+                <input type="text" placeholder="Sök produkter..." class="search-input" />
+                <button class="search-btn" aria-label="Sök">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+                        <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-nav" aria-label="Mobil navigation">
+            <p class="mobile-nav-note">Bläddra bland genrer eller använd söket.</p>
+            <div class="mobile-discover-row">
+                <a href="/produkter" class="mobile-discover-link">Upptäck spel</a>
+                <button type="button" class="mobile-discover-toggle" aria-expanded="false" aria-controls="mobile-discover-list" aria-label="Visa genrer">
+                    <span class="chevron" aria-hidden="true"></span>
+                </button>
+            </div>
+            <ul id="mobile-discover-list" class="mobile-discover-list" hidden>
+                <li><a href="#"><strong>Populära</strong></a></li>
+                <li><a href="#"><strong>Nya Spel</strong></a></li>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Äventyr</a></li>
+                <li><a href="#">Rollspel (RPG)</a></li>
+                <li><a href="#">Strategi</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Racing</a></li>
+                <li><a href="#">Simulering</a></li>
+                <li><a href="#">Plattform</a></li>
+                <li><a href="#">Skräck</a></li>
+                <li><a href="#">Pussel</a></li>
+                <li><a href="#">Familj</a></li>
+                <li><a href="#">Indie</a></li>
+                <li><a href="#">Multiplayer</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
