@@ -23,6 +23,9 @@ body {
 h2, h3 {
     margin: 0;
 }
+h2 {
+    font-size: var(--font-size-lg);
+}
 
 button {
     background: none;
@@ -38,9 +41,8 @@ input {
     padding: var(--spacing-sm);
 }
 
-section {
-    display: flex;
-    justify-self: center;
+section{
+    display: grid;
 }
 
 .grid-container {
@@ -101,8 +103,19 @@ img {
 .discount {
     font-size: var(--font-size-sm);
     font-weight: lighter;
-}   
+}
 
+.remove-item-button {
+    font-size: var(--font-size-sm);
+    margin-top: 10px;
+    transition: 80ms;
+}
+.remove-item-button svg {
+    margin-bottom: -1px;
+}
+.remove-item-button:hover {
+    transform: scale(1.03);
+}
 
 /* RIGHT COLUMN */
 .right-column {
@@ -162,10 +175,41 @@ img {
     border: none;
     cursor: pointer;
     width: 100%;
+    transition: 200ms;
+}
+.checkout-button:hover {
+    background-color: var(--primary-color);
 }
 
 .border-radius {
     border-radius: 10px;
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+    section {
+        padding: var(--spacing-md);
+    }
+    h2 {
+        font-size: var(--font-size-md);
+    }
+    .item-price div:first-child {
+        font-size: var(--font-size-md);
+    }
+    
+    .discount {
+        font-size: var(--font-size-xs);
+    }
+    .item-info:nth-child(1) {
+        font-size: var(--font-size-xs);
+
+    }
+    .total-price-text {
+        font-size: var(--font-size-sm);
+    }
+    .final-price-container {
+        font-size: var(--font-size-md);
+    }
 }
 
 
@@ -198,13 +242,20 @@ img {
     .discount {
         text-align: start;
     }
-
-}
-
-
-/* TABLET */
-@media screen and (max-width: 1024px) {
-    section {
-        padding: var(--spacing-md);
+    h2 {
+        font-size: var(--font-size-md);
     }
+    .item-info:nth-child(1) {
+        font-size: var(--font-size-xs);
+
+    }
+    .item-price div:first-child {
+        font-size: var(--font-size-md);
+    }
+    
+    .discount {
+        font-size: var(--font-size-xs);
+    }
+
 }
+
