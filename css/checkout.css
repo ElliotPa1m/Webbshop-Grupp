@@ -23,7 +23,7 @@ input {
     padding: 10px;
 }
 
-.flex-container {
+.grid-container {
     display: grid;
     justify-self: center;
     grid-template-columns: 2fr 1fr;
