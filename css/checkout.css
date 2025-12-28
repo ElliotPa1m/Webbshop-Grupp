@@ -63,6 +63,12 @@ img {
     justify-content: space-between;
     align-items: end;
 }
+.item-price div {
+    text-align: right;
+}
+.discount {
+    font-size: 12px;
+}   
 
 .right-column {
     display: flex;
@@ -93,8 +99,24 @@ img {
     background-color: var(--secondary-color);
     padding: 20px;
 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-evenly;
 }
 
+.total-price>div {
+    display: inline-flex;
+    justify-content: space-between;
+}
+.total-price>div :first-child {
+    font-weight: bold;
+}
+
+.final-price-container {
+    font-size: 22px;
+    font-weight: bold;
+}
 
 .checkout-button {
     background-color: var(--accent-color);
