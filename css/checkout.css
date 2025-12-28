@@ -6,7 +6,15 @@
     --spacing-md: 15px;
     --spacing-lg: 20px;
     --spacing-xl: 30px;
+
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 18px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
 }
+
+
 body {
     background-color: var(--background-color);
     color: white;
@@ -85,8 +93,14 @@ img {
     text-align: right;
 }
 
+.item-price div:first-child {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
 .discount {
-    font-size: 12px;
+    font-size: var(--font-size-sm);
+    font-weight: lighter;
 }   
 
 
@@ -111,7 +125,7 @@ img {
     color: var(--accent-color);
     font-weight: bold;
     transition: 200ms;
-    font-size: 30px;
+    font-size: var(--font-size-xl);
 }
 .discount-code button:hover {
     background-color: var(--primary-color);
@@ -135,7 +149,7 @@ img {
 }
 
 .final-price-container {
-    font-size: 22px;
+    font-size: var(--font-size-lg);
     font-weight: bold;
 }
 
@@ -143,7 +157,7 @@ img {
     background-color: var(--accent-color);
     color: white;
     padding: var(--spacing-md);
-    font-size: 16px;
+    font-size: var(--font-size-md);
     font-weight: bold;
     border: none;
     cursor: pointer;
