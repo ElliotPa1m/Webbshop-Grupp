@@ -17,7 +17,70 @@ body {
 
 .sorting-search-section {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
+
+.filter-sorting-btn {
+    position: relative;
+    background-color: inherit;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.15s ease;
+}
+
+.filter-sorting-btn:hover {
+    color: var(--text-color);
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -50%;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.filter-sorting-btn:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Searchbar */
+
+#products-list-search {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px 20px 14px 45px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: 1px solid #e0e0e0;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 18px center;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Product list */
 
 .product-list {
     display: grid;
@@ -41,13 +104,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 1px solid var(--border-color);
     border-radius: 10px;
-    background-color: var(--item-background-color);
-    box-sizing: border-box;
-}
-
-.product-item:hover {
     cursor: pointer;
 }
 
@@ -81,11 +138,12 @@ body {
     height: 100%;
     object-fit: contain;
     border-radius: 10px;
+    filter: brightness(1.0);
     transition: filter 0.3s ease-in-out;
 }
 
 .product-item:hover img {
-    filter: brightness(0.8);
+    filter: brightness(1.2);
 }
 
 .price {

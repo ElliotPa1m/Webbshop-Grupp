@@ -2,8 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const productList = document.querySelector(".product-list");
+    const searchInput = document.getElementById("products-list-search");
 
-    products.forEach((products) => {
+    // This is for automatically render / generate all games in the products list.
+    products.forEach((product) => {
         const item = document.createElement("div");
         item.className = "product-item";
 
@@ -11,41 +13,55 @@ document.addEventListener("DOMContentLoaded", () => {
         imgContainer.className = "image-container";
 
         const img = document.createElement("img");
-        img.src = products.image;
-        img.alt = products.title;
+        img.src = product.image;
+        img.alt = product.title;
         imgContainer.append(img);
 
         item.append(imgContainer);
 
         const title = document.createElement("h2");
-        title.textContent = products.title;
+        title.textContent = product.title;
+        item.dataset.title = product.title.toLowerCase();
 
         item.append(title);
 
         const genre = document.createElement("p");
-        genre.textContent = products.genre;
+        genre.textContent = product.genre;
 
         item.append(genre);
 
         const price = document.createElement("span");
         price.className = "price";
 
-        if (products.price && products.onSalePrice) {
+        if (product.price && product.onSalePrice) {
             const oldPrice = document.createElement("span");
             oldPrice.className = "old-price";
-            oldPrice.textContent = `${products.price} kr`
+            oldPrice.textContent = `${product.price} kr`
             price.append(oldPrice);
 
             const onSalePrice = document.createElement("span");
             onSalePrice.className = "new-price";
-            onSalePrice.textContent = `${products.onSalePrice} kr`
+            onSalePrice.textContent = `${product.onSalePrice} kr`
             price.append(onSalePrice);
         } else {
-            price.textContent = `${products.price} kr`
+            price.textContent = `${product.price} kr`
         }
 
         item.append(price);
 
         productList.append(item);
     })
+
+    if (searchInput) {
+        searchInput.addEventListener("input", () => {
+            const query = searchInput.value.toLowerCase().trim();
+            const listProducts = document.querySelectorAll(".product-item");
+
+            listProducts.forEach((item) => {
+                const title = item.dataset.title;
+
+                item.style.display = query && !title.includes(query) ? "none" : "";
+            });
+        });
+    }
 });
