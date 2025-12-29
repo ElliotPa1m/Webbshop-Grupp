@@ -41,7 +41,8 @@ h5 {
 }
 input[type="text"],
 select,
-textarea {
+textarea,
+input[type="email"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #343434;
