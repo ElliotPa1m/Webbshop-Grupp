@@ -26,6 +26,14 @@ h2, h3 {
 h2 {
     font-size: var(--font-size-lg);
 }
+header, footer{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+    color: black;
+    background-color: white;
+}
 
 button {
     background: none;
