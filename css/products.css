@@ -1,0 +1,24 @@
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 60%;
+    height: 95vh;
+    padding: 20px;
+}
+
+.main-container h1 {
+    font-weight: 900;
+}
+
+.sorting-search-section {
+    display: flex;
+}
+
+.product-list {
+    display: grid;
+}
