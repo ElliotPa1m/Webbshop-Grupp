@@ -13,6 +13,8 @@
   --secondary-color: #696969;
   --accent-color: #00607a;
   --text: #ffffff;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --radius: 16px;
 }
 html,
 body {
@@ -107,4 +109,42 @@ a {
 
 .btn-accent:hover {
   opacity: 0.8;
+}
+
+/* ------------------------------
+   Promo cards
+-------------------------------- */
+.promos {
+  padding: 28px 0 8px;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.promo {
+  border-radius: var(--radius);
+  padding: 34px 26px;
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+}
+
+.promo-title {
+  margin: 0;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+
+.promo-teal {
+  background: var(--accent-color);
+}
+
+.promo-gray {
+  background: var(--secondary-color);
 }
