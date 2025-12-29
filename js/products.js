@@ -3,6 +3,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const productList = document.querySelector(".product-list");
     const searchInput = document.getElementById("products-list-search");
+    
+    document.getElementById("filter-sorting-btn").addEventListener("click", openFilterModule);
+
+    function openFilterModule() {
+        const filterModule = document.querySelector(".filter-module");
+        const overlay = document.querySelector(".overlay");
+        overlay.classList.add("active");
+        filterModule.classList.add("open");
+    }
 
     // This is for automatically render / generate all games in the products list.
     products.forEach((product) => {
