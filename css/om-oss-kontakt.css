@@ -8,11 +8,11 @@ body {
   color: var(--text-color);
 }
 
-.line {
+.line-ook {
   border-bottom: 1px solid var(--secondary-color);
 }
 
-.container {
+.container-ook {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -26,7 +26,7 @@ h5 {
   text-align: center;
 }
 
-.card {
+.card-ook {
   border: solid var(--primary-color);
   border-radius: 5px;
   padding-left: 0.5vw;
@@ -36,7 +36,7 @@ h5 {
   color: var(--text-color);
 }
 
-#container {
+#container-ook {
   margin: 0 auto;
   width: 60%;
 }
@@ -58,7 +58,7 @@ input[type="email"] {
   font-family: var(--font-family);
 }
 input[type="submit"] {
-  background-color: #343434;
+  background-color: var(--primary-color);
   color: var(--text-color);
   padding: 12px 20px;
   border: solid var(--secondary-color);
@@ -87,7 +87,7 @@ label {
 
 /*large desktop*/
 @media screen and (min-width: 1516px) {
-  .cards {
+  .cards-ook {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -99,7 +99,7 @@ label {
 
 /* small desktop */
 @media screen and (max-width: 1515px) {
-  .cards {
+  .cards-ook {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -111,10 +111,10 @@ label {
 
 /* tablet */
 @media screen and (max-width: 1020px) and (min-width: 700px) {
-  #container {
+  #container-ook {
     width: 80%;
   }
-  .cards {
+  .cards-ook {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -126,10 +126,10 @@ label {
 
 /* Mobile */
 @media screen and (max-width: 699px) {
-  #container {
+  #container-ook {
     width: 90%;
   }
-  .cards {
+  .cards-ook {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);

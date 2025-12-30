@@ -1,5 +1,5 @@
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   background-color: var(--background-color);
 }
 
@@ -8,7 +8,7 @@ body {
   text-align: center;
 }
 
-img {
+.image-grid {
   height: 100px;
   width: 150px;
 }
@@ -17,7 +17,7 @@ img {
   background-color: var(--secondary-color);
 }
 
-.grid-container {
+.grid-container-ook {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -25,12 +25,12 @@ img {
   grid-row-gap: 0px;
 }
 
-.grid-div {
+.grid-div-ook {
   justify-self: center;
   align-self: center;
 }
 
-.button {
+.button-ook {
   white-space: nowrap;
   background-color: var(--primary-color);
   margin: 10px;
@@ -53,7 +53,7 @@ img {
 
 /* small desktop */
 @media screen and (max-width: 1515px) and (min-width: 1025) {
-  .grid-container {
+  .grid-container-ook {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -64,7 +64,7 @@ img {
 
 /* tablet */
 @media screen and (max-width: 1024px) and (min-width: 700px) {
-  .grid-container {
+  .grid-container-ook {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -75,7 +75,7 @@ img {
 
 /* Mobile */
 @media screen and (max-width: 699px) {
-  .grid-container {
+  .grid-container-ook {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
