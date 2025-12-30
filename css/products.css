@@ -67,13 +67,14 @@ body {
 
 /* Filter & sorting module */
 
-.filter-module {
+.filter-modal {
     position: fixed;
     top: 0;
     right: -33vw;
     height: 100%;
     width: 33vw;
     max-width: 500px;
+    padding: 20px;
     background-color: var(--background-color);
     transition: right 0.4s ease-in-out;
     z-index: 1000;
@@ -82,19 +83,79 @@ body {
     overflow: hidden;
 }
 
-.filter-module.open {
+.filter-modal.open {
     right: 0;
 }
 
 @media (max-width: 900px) {
-    .filter-module {
+    .filter-modal {
         width: 80vw;
         right: -80vw
     }
 
-    .filter-module.open {
+    .filter-modal.open {
         right: 0;
     }
+}
+
+.filter-modal-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    max-height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 auto;
+}
+
+.filter-modal-header .close-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.filter-modal-header .close-btn::before,
+.filter-modal-header .close-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 2px;
+    background: var(--secondary-color);
+    transform-origin: center;
+}
+
+.filter-modal-header .close-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.filter-modal-header .close-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.filter-modal-header .close-btn:hover {
+    background: var(--text-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.filter-modal-header .close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+}
+
+.filter-modal-body {
+    height: 100%;
+    width: 100%;
 }
 
 .overlay {
