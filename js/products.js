@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // This is for automatically render / generate all games in the products list.
     products.forEach((product, index) => {
         const link = document.createElement("a");
-        link.href = `product.html?id=${index}`;
+        link.href = `product.html?id=${index}`; // Note: I didnt know what the product page will be named, so this is a placeholder for now. Create a "DOMContentLoaded" and change the product details by the ID from the config.
         link.className = "product-link";
 
         const item = document.createElement("div");
