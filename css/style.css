@@ -7,6 +7,20 @@
     --background-color: #111111;
     --text-color: #ffffff;
     --font-family: 'Inter', sans-serif;
+    
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+ 
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 18px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+
+    --border-radius:10px;
 }
 
 /* Exempel användning av variabler */

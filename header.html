@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/checkout.css">
-</head>
-<body>
-    <div id="header-container">
+<div id="header-container">
     <a href="/" id="logo">
         <img src="img/PixelhusetLogo-cropped.svg" alt="Pixelhuset logo" />
     </a>
     <nav aria-label="Huvudnavigering">
         <ul class="main-nav">
             <li class="dropdown">
-                <a href="/produkter" class="dropdown-toggle">Upptäck spel</a>
+                <a href="/products.html" class="dropdown-toggle">Upptäck spel</a>
                 <div class="dropdown-menu">
                     <div class="dropdown-items">
                         <a href="#"><strong>Populära</strong></a>
@@ -48,8 +38,8 @@
                 </svg>
             </button>
         </div>
-        <button class="kassa-btn">Kassa</button>
-        <button type="button" class="hamburger-btn" aria-label="�ppna meny" aria-expanded="false" aria-controls="mobile-menu">
+        <button class="kassa-btn" onclick="location.href='/checkout.html'">Kassa</button>
+        <button type="button" class="hamburger-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-menu">
             <span></span>
             <span></span>
             <span></span>
@@ -107,6 +97,3 @@
         </nav>
     </div>
 </div>
-
-</body>
-</html>
