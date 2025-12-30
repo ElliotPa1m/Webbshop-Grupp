@@ -4,13 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const productList = document.querySelector(".product-list");
     const searchInput = document.getElementById("products-list-search");
     
-    document.getElementById("filter-sorting-btn").addEventListener("click", openFilterModule);
+    document.getElementById("filter-sorting-btn").addEventListener("click", handleFilterModal);
+    document.getElementById("close-btn").addEventListener("click", handleFilterModal);
 
-    function openFilterModule() {
-        const filterModule = document.querySelector(".filter-module");
+    function handleFilterModal() {
+        const filterModal = document.querySelector(".filter-modal");
         const overlay = document.querySelector(".overlay");
-        overlay.classList.add("active");
-        filterModule.classList.add("open");
+        if (filterModal.classList.contains("open")) {
+            overlay.classList.remove("active");
+            filterModal.classList.remove("open");
+        } else {
+            overlay.classList.add("active");
+            filterModal.classList.add("open");
+        }
     }
 
     // This is for automatically render / generate all games in the products list.
