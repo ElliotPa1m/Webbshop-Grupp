@@ -55,7 +55,7 @@ input[type="email"] {
 }
 * {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
 }
 input[type="submit"] {
   background-color: #343434;
