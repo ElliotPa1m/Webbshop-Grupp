@@ -244,3 +244,40 @@ a {
   margin: 0;
   color: var(--text);
 }
+
+/* ------------------------------
+   Responsiveness
+-------------------------------- */
+
+/* Small desktop */
+@media (max-width: 1100px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 860px) {
+  .promo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .hero {
+    min-height: 360px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
