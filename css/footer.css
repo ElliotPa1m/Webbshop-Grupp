@@ -1,10 +1,10 @@
 body {
   font-family: "Inter", sans-serif;
-  background-color: #111111;
+  background-color: var(--background-color);
 }
 
 #copyright {
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -14,7 +14,7 @@ img {
 }
 
 .button:hover {
-  background-color: #696969;
+  background-color: var(--secondary-color);
 }
 
 .grid-container {
@@ -32,23 +32,23 @@ img {
 
 .button {
   white-space: nowrap;
-  background-color: #343434;
+  background-color: var(--primary-color);
   margin: 10px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 24px;
   padding: 14px 40px;
   border-radius: 8px;
-  border: solid #696969;
+  border: solid var(--secondary-color);
   cursor: pointer;
 }
 
 .social-buttons a {
-  color: #343434;
+  color: var(--primary-color);
   font-size: 40px;
 }
 
 .social-buttons a:hover {
-  color: #696969;
+  color: var(--secondary-color);
 }
 
 /* small desktop */
