@@ -1,23 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('/css/style.css');
-:root {
-    --spacing-xs: 5px;
-    --spacing-sm: 10px; 
-    --spacing-md: 15px;
-    --spacing-lg: 20px;
-    --spacing-xl: 30px;
-
-    --font-size-xs: 12px;
-    --font-size-sm: 14px;
-    --font-size-md: 18px;
-    --font-size-lg: 24px;
-    --font-size-xl: 32px;
-}
-
 
 body {
     background-color: var(--background-color);
-    color: white;
+    color: var(--text-color);
     font-family: var(--font-family);
 }
 h2, h3 {
@@ -26,16 +12,8 @@ h2, h3 {
 h2 {
     font-size: var(--font-size-lg);
 }
-header, footer{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 100px;
-    color: black;
-    background-color: white;
-}
 
-button {
+.button-checkout{
     background: none;
     border: none;
     color: white;
@@ -49,11 +27,11 @@ input {
     padding: var(--spacing-sm);
 }
 
-section{
+.checkout-section{
     display: grid;
 }
 
-.grid-container {
+.grid-container-checkout {
     display: grid;
     justify-self: center;
     grid-template-columns: 2fr 1fr;
@@ -84,7 +62,7 @@ h1 {
     
 }
 
-img {
+.item-img-checkout {
     width: 100%;
 }
 .item-info-container {

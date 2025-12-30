@@ -1,5 +1,6 @@
 /* ------------------------------
    Bas
+   Base
 -------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 *,
@@ -84,6 +85,7 @@ a {
 
 /* ------------------------------
    Buttons
+   Button
 -------------------------------- */
 .btn {
   display: inline-flex;
@@ -138,7 +140,7 @@ a {
   text-align: center;
   font-weight: 900;
   letter-spacing: 0.4px;
-  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  font-size: 2rem;
 }
 
 .promo-teal {
@@ -147,4 +149,137 @@ a {
 
 .promo-gray {
   background: var(--secondary-color);
+}
+
+/* ------------------------------
+   Sections and game cards
+-------------------------------- */
+.section {
+  padding: 22px 0;
+}
+
+.section-head {
+  margin-bottom: 14px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.game-card {
+  background: transparent;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.game-meta {
+  padding-top: 10px;
+}
+
+.game-title {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.game-info {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* ------------------------------
+   Reviews
+-------------------------------- */
+.reviews {
+  margin-top: 26px;
+  background: #2f3339;
+  padding: 22px 0;
+}
+
+.reviews-title {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.review-card {
+  background: var(--secondary-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.stars {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.review-author {
+  margin: 8px 0 6px;
+  color: var(--text);
+  opacity: 0.95;
+}
+
+.review-text {
+  margin: 0;
+  color: var(--text);
+}
+
+/* ------------------------------
+   Responsiveness
+-------------------------------- */
+
+/* Small desktop */
+@media (max-width: 1100px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 860px) {
+  .promo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .hero {
+    min-height: 360px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
