@@ -62,9 +62,18 @@ h1 {
     
 }
 
+
 .item-img-checkout {
     width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
 }
+.item-img-checkout:hover {
+    filter: brightness(0.8);
+}   
+
 .item-info-container {
     display: flex;
     flex-direction: row;
