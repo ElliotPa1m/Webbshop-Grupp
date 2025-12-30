@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const title = document.createElement("h2");
         title.textContent = product.title;
-        item.dataset.title = product.title.toLowerCase();
+        link.dataset.title = product.title.toLowerCase();
 
         item.append(title);
 
         const genre = document.createElement("p");
         genre.textContent = product.genre;
-        item.dataset.genre = product.genre;
+        link.dataset.genre = product.genre;
 
         item.append(genre);
 
@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
             onSalePrice.className = "new-price";
             onSalePrice.textContent = `${product.onSalePrice} kr`
             price.append(onSalePrice);
-            item.dataset.price = product.onSalePrice;
+            link.dataset.price = product.onSalePrice;
         } else {
             price.textContent = `${product.price} kr`
-            item.dataset.price = product.price;
+            link.dataset.price = product.price;
         }
 
         item.append(price);
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sorting.addEventListener("change", () => {
         const value = sorting.value;
-        const items = Array.from(productList.querySelectorAll(".product-item"));
+        const items = Array.from(productList.querySelectorAll(".product-link"));
         let sortedProducts = [...items];
 
         if (value === "price-asc") {
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const maxPrice = parseInt(priceMaxSlider.value);
         const onlyOnSale = document.getElementById("sale-only").checked;
 
-        document.querySelectorAll(".product-item").forEach(item => {
+        document.querySelectorAll(".product-link").forEach(item => {
             const titleMatch = !query || item.dataset.title.includes(query);
             const categoryMatch = checkedCategories.includes(item.dataset.genre);
             const price = parseInt(item.dataset.price);
