@@ -201,6 +201,9 @@ body {
 
 .sale {
     cursor: pointer;
+}
+
+.filter-modal-body .sale {
     font-size: 16px;
 }
 
