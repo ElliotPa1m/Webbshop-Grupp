@@ -5,7 +5,7 @@ header * {
   font-family: var(--font-family);
 }
 header {
-  /* width: 100vw; fuckade med sidan med en fast width */
+  /* width: 100vw; */
   height: 100px;
 }
 
