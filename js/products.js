@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.getElementById("filter-sorting-btn").addEventListener("click", handleFilterModal);
     document.getElementById("close-btn").addEventListener("click", handleFilterModal);
+    document.getElementById("overlay").addEventListener("click", handleFilterModal)
 
     function handleFilterModal() {
         const filterModal = document.querySelector(".filter-modal");
