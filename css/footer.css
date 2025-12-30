@@ -1,23 +1,23 @@
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #111111;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
 }
 
 #copyright {
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
 }
 
-img {
+.image-grid {
   height: 100px;
   width: 150px;
 }
 
 .button:hover {
-  background-color: #696969;
+  background-color: var(--secondary-color);
 }
 
-.grid-container {
+.grid-container-ook {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -25,35 +25,35 @@ img {
   grid-row-gap: 0px;
 }
 
-.grid-div {
+.grid-div-ook {
   justify-self: center;
   align-self: center;
 }
 
-.button {
+.button-ook {
   white-space: nowrap;
-  background-color: #343434;
+  background-color: var(--primary-color);
   margin: 10px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 24px;
   padding: 14px 40px;
   border-radius: 8px;
-  border: solid #696969;
+  border: solid var(--secondary-color);
   cursor: pointer;
 }
 
 .social-buttons a {
-  color: #343434;
+  color: var(--primary-color);
   font-size: 40px;
 }
 
 .social-buttons a:hover {
-  color: #696969;
+  color: var(--secondary-color);
 }
 
 /* small desktop */
 @media screen and (max-width: 1515px) and (min-width: 1025) {
-  .grid-container {
+  .grid-container-ook {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -64,7 +64,7 @@ img {
 
 /* tablet */
 @media screen and (max-width: 1024px) and (min-width: 700px) {
-  .grid-container {
+  .grid-container-ook {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -75,7 +75,7 @@ img {
 
 /* Mobile */
 @media screen and (max-width: 699px) {
-  .grid-container {
+  .grid-container-ook {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
