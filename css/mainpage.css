@@ -38,8 +38,14 @@ a {
 .container {
   width: min(1100px, calc(100% - 32px));
   margin: 0 auto;
+    padding-top: 100px;
 }
 
+  @media (max-width: 900px), (pointer: coarse) {
+    .container {
+      padding-top: 100px;
+    }
+  }
 /* ------------------------------
    Hero
 -------------------------------- */
