@@ -52,10 +52,10 @@ header nav .main-nav > li {
 
 header .dropdown-toggle {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   cursor: pointer;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
 }
 
 header .dropdown-toggle:hover {
@@ -84,7 +84,7 @@ header .dropdown-menu.visible {
 
 header .dropdown-menu .dropdown-items {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
   height: 160px;
   display: flex;
   flex-wrap: wrap;
@@ -96,17 +96,17 @@ header .dropdown-menu .dropdown-items {
 
 header .dropdown-menu > a strong {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: var(--font-size-md);
   text-decoration: none;
   color: var(--text-color);
   cursor: default;
-  margin-bottom: 0.3rem;
+  margin-bottom: var(--spacing-xs);
   display: block;
 }
 header .dropdown-menu a {
   text-decoration: none;
   color: var(--text-color);
-  padding: 0.2rem 0;
+  padding: var(--spacing-xs) 0;
   display: block;
   transition: color 0.2s;
 }
@@ -117,21 +117,21 @@ header .dropdown-menu a:hover {
 header #header-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-lg);
 }
 header .hamburger-btn {
   display: none;
   background: none;
   border: none;
-  padding: 0.4rem;
+  padding: var(--spacing-sm);
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-xs);
   transition: background 0.2s, color 0.2s;
 }
 header .hamburger-btn span {
@@ -139,25 +139,26 @@ header .hamburger-btn span {
   width: 22px;
   height: 2px;
   background: var(--text-color);
-  border-radius: 999px;
+  border-radius: var(--border-radius);
   transition: transform 0.2s, opacity 0.2s;
 }
 header .search-bar {
   display: flex;
   align-items: center;
   background: var(--background-color);
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   min-width: 220px;
   max-width: 350px;
-  height: 40px;
-  padding: 0 0.5rem 0 1rem;
+  height: 41.6px;
+  padding: 0 var(--spacing-sm) 0 var(--spacing-lg);
+  align-items: center;
 }
 header .search-bar .search-input {
   border: none;
   outline: none;
   background: transparent;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   padding: 0;
   flex: 1;
   height: 100%;
@@ -195,9 +196,9 @@ header .kassa-btn {
   background: var(--accent-color);
   color: var(--text-color);
   border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-size: var(--font-size-md);
   cursor: pointer;
 }
 header .mobile-menu {
