@@ -52,10 +52,10 @@ header nav .main-nav > li {
 
 header .dropdown-toggle {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   cursor: pointer;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
 }
 
 header .dropdown-toggle:hover {
@@ -84,7 +84,7 @@ header .dropdown-menu.visible {
 
 header .dropdown-menu .dropdown-items {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
   height: 160px;
   display: flex;
   flex-wrap: wrap;
@@ -96,17 +96,17 @@ header .dropdown-menu .dropdown-items {
 
 header .dropdown-menu > a strong {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: var(--font-size-md);
   text-decoration: none;
   color: var(--text-color);
   cursor: default;
-  margin-bottom: 0.3rem;
+  margin-bottom: var(--spacing-xs);
   display: block;
 }
 header .dropdown-menu a {
   text-decoration: none;
   color: var(--text-color);
-  padding: 0.2rem 0;
+  padding: var(--spacing-xs) 0;
   display: block;
   transition: color 0.2s;
 }
@@ -117,21 +117,21 @@ header .dropdown-menu a:hover {
 header #header-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-lg);
 }
 header .hamburger-btn {
   display: none;
   background: none;
   border: none;
-  padding: 0.4rem;
+  padding: var(--spacing-sm);
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-xs);
   transition: background 0.2s, color 0.2s;
 }
 header .hamburger-btn span {
@@ -139,25 +139,26 @@ header .hamburger-btn span {
   width: 22px;
   height: 2px;
   background: var(--text-color);
-  border-radius: 999px;
+  border-radius: var(--border-radius);
   transition: transform 0.2s, opacity 0.2s;
 }
 header .search-bar {
   display: flex;
   align-items: center;
   background: var(--background-color);
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   min-width: 220px;
   max-width: 350px;
-  height: 40px;
-  padding: 0 0.5rem 0 1rem;
+  height: 41.6px;
+  padding: 0 var(--spacing-sm) 0 var(--spacing-lg);
+  align-items: center;
 }
 header .search-bar .search-input {
   border: none;
   outline: none;
   background: transparent;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   padding: 0;
   flex: 1;
   height: 100%;
@@ -195,12 +196,12 @@ header .kassa-btn {
   background: var(--accent-color);
   color: var(--text-color);
   border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-size: var(--font-size-md);
   cursor: pointer;
 }
-.mobile-menu {
+header .mobile-menu {
   position: fixed;
   inset: 0;
   background: color-mix(in srgb, var(--background-color) 70%, transparent);
@@ -210,11 +211,11 @@ header .kassa-btn {
   transition: opacity 0.25s ease;
   z-index: 1100;
 }
-.mobile-menu.open {
+header .mobile-menu.open {
   opacity: 1;
   pointer-events: auto;
 }
-.mobile-menu__panel {
+header .mobile-menu__panel {
   position: absolute;
   inset: 0;
   margin-left: auto;
@@ -237,10 +238,10 @@ header .kassa-btn {
   border-top: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
   border-radius: 18px 0 0 18px;
 }
-.mobile-menu.open .mobile-menu__panel {
+header .mobile-menu.open .mobile-menu__panel {
   transform: translateX(0);
 }
-.mobile-menu__top {
+header .mobile-menu__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -249,23 +250,23 @@ header .kassa-btn {
   border-bottom: 1px solid
     color-mix(in srgb, var(--text-color) 12%, transparent);
 }
-.mobile-menu__meta {
+header .mobile-menu__meta {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
 }
-.mobile-menu__eyebrow {
+header .mobile-menu__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.75rem;
   color: var(--secondary-color);
 }
-.mobile-menu__title {
+header .mobile-menu__title {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 650;
 }
-.mobile-close-btn {
+header .mobile-close-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -279,7 +280,7 @@ header .kassa-btn {
   cursor: pointer;
   transition: background 0.2s, transform 0.15s ease, border-color 0.2s;
 }
-.mobile-close-btn span {
+header .mobile-close-btn span {
   position: absolute;
   display: block;
   width: 16px;
@@ -287,34 +288,34 @@ header .kassa-btn {
   background: currentColor;
   border-radius: 999px;
 }
-.mobile-close-btn span:first-child {
+header .mobile-close-btn span:first-child {
   transform: rotate(45deg);
 }
-.mobile-close-btn span:last-child {
+header .mobile-close-btn span:last-child {
   transform: rotate(-45deg);
 }
-.mobile-close-btn:hover {
+header .mobile-close-btn:hover {
   background: color-mix(in srgb, var(--text-color) 12%, transparent);
   border-color: color-mix(in srgb, var(--text-color) 18%, transparent);
 }
-.mobile-close-btn:active {
+header .mobile-close-btn:active {
   transform: scale(0.96);
 }
-.mobile-nav {
+header .mobile-nav {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
   width: 100%;
 }
-.mobile-search-row {
+header .mobile-search-row {
   margin-top: 0.75rem;
 }
-.mobile-search {
+header .mobile-search {
   width: 100%;
   min-width: unset;
   max-width: none;
 }
-.mobile-menu .search-bar {
+header .mobile-menu .search-bar {
   display: flex;
   align-items: center;
   background: color-mix(in srgb, var(--text-color) 4%, transparent);
@@ -326,7 +327,7 @@ header .kassa-btn {
   height: 44px;
   padding: 0 0.5rem 0 1rem;
 }
-.mobile-menu .search-input {
+header .mobile-menu .search-input {
   border: none;
   outline: none;
   background: transparent;
@@ -336,10 +337,10 @@ header .kassa-btn {
   flex: 1;
   height: 100%;
 }
-.mobile-menu .search-input::placeholder {
+header .mobile-menu .search-input::placeholder {
   color: var(--secondary-color);
 }
-.mobile-menu .search-btn {
+header .mobile-menu .search-btn {
   background: none;
   border: none;
   color: var(--text-color);
@@ -356,22 +357,22 @@ header .kassa-btn {
   align-items: center;
   justify-content: center;
 }
-.mobile-menu .search-btn:hover {
+header .mobile-menu .search-btn:hover {
   background: color-mix(in srgb, var(--text-color) 8%, transparent);
 }
-.mobile-search .search-icon {
+header .mobile-search .search-icon {
   display: block;
   width: 20px;
   height: 20px;
   pointer-events: none;
 }
-.mobile-nav-note {
+header .mobile-nav-note {
   margin: 0;
   color: var(--secondary-color);
   font-size: 0.92rem;
   text-align: center;
 }
-.mobile-discover-row {
+header .mobile-discover-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -383,14 +384,14 @@ header .kassa-btn {
   box-shadow: 0 8px 24px
     color-mix(in srgb, var(--background-color) 55%, transparent);
 }
-.mobile-discover-link {
+header .mobile-discover-link {
   color: var(--text-color);
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 600;
   flex: 1;
 }
-.mobile-discover-toggle {
+header .mobile-discover-toggle {
   background: linear-gradient(
     135deg,
     var(--accent-color),
@@ -410,11 +411,11 @@ header .kassa-btn {
     color-mix(in srgb, var(--background-color) 55%, transparent);
   transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
 }
-.mobile-discover-toggle:hover {
+header .mobile-discover-toggle:hover {
   transform: translateY(-1px);
   filter: brightness(1.05);
 }
-.mobile-discover-toggle .chevron {
+header .mobile-discover-toggle .chevron {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -425,11 +426,11 @@ header .kassa-btn {
   transition: transform 0.3s ease-in-out;
   transform: rotate(-45deg);
 }
-.mobile-discover-toggle[aria-expanded="true"] .chevron,
-.mobile-discover-toggle.expanded .chevron {
+header .mobile-discover-toggle[aria-expanded="true"] .chevron,
+header .mobile-discover-toggle.expanded .chevron {
   transform: rotate(45deg);
 }
-.mobile-discover-list {
+header .mobile-discover-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -437,13 +438,13 @@ header .kassa-btn {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.6rem;
 }
-.mobile-discover-list[hidden] {
+header .mobile-discover-list[hidden] {
   display: none !important;
 }
-.mobile-discover-list li {
+header .mobile-discover-list li {
   width: 100%;
 }
-.mobile-discover-list a {
+header .mobile-discover-list a {
   color: var(--text-color);
   text-decoration: none;
   padding: 0.55rem 0.7rem;
@@ -457,13 +458,13 @@ header .kassa-btn {
     color-mix(in srgb, var(--background-color) 45%, transparent);
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
-.mobile-discover-list a::after {
+header .mobile-discover-list a::after {
   content: ">";
   color: var(--accent-color);
   font-size: 0.85rem;
   margin-left: 0.5rem;
 }
-.mobile-discover-list a:hover {
+header .mobile-discover-list a:hover {
   color: var(--text-color);
   background: color-mix(in srgb, var(--accent-color) 20%, transparent);
   border-color: color-mix(in srgb, var(--accent-color) 50%, transparent);
