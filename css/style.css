@@ -7,6 +7,8 @@
     --background-color: #111111;
     --text-color: #ffffff;
     --font-family: 'Inter', sans-serif;
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  
     
     --spacing-xs: 5px;
     --spacing-sm: 10px;
@@ -21,6 +23,7 @@
     --font-size-xl: 32px;
 
     --border-radius:10px;
+    --promocard-radius: 16px;
 }
 
 /* Exempel användning av variabler */

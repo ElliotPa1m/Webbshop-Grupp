@@ -9,14 +9,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #111111;
-  --secondary-color: #696969;
-  --accent-color: #00607a;
-  --text: #ffffff;
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  --radius: 16px;
-}
 html,
 body {
   height: 100%;
@@ -26,7 +18,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--text-color);
   line-height: 1.4;
 }
 
@@ -51,7 +43,7 @@ a {
 -------------------------------- */
 .hero {
   position: relative;
-  min-height: 420px;
+  min-height: 500px;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -60,11 +52,24 @@ a {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: var(--secondary-color);
+
+  background:
+    /* Gradient-overlay (ligger över bilden) */
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.15) 60%
+    ),
+
+    /* Hero-bild */
+    url("https://raw.githubusercontent.com/ElliotPa1m/Webbshop-Grupp/refs/heads/feature/product-list-filter-and-sorting/img/hogwarts_legacy_HERO.webp");
+
   background-size: cover;
-  background-position: center;
+  /*background-position: center;
+  background-repeat: no-repeat;
+
+  /* Små visuella förbättringar */
   filter: saturate(1.05);
-  transform: scale(1.02);
 }
 
 .hero-content {
@@ -133,7 +138,7 @@ a {
 }
 
 .promo {
-  border-radius: var(--radius);
+  border-radius: var(--promocard-radius);
   padding: 34px 26px;
   min-height: 120px;
   display: grid;
