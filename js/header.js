@@ -101,3 +101,15 @@
     window.addEventListener('resize', handleDesktop);
   }
 })();
+
+// Load header HTML
+fetch('header.html')
+  .then(response => response.text())
+  .then(html => {
+    document.querySelectorAll('header').forEach(header => {
+      header.innerHTML = html;
+      if (typeof initHeader === 'function') {
+        initHeader(header);
+      }
+    });
+  });
