@@ -1,5 +1,4 @@
 /* ------------------------------
-   Bas
    Base
 -------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -30,14 +29,8 @@ a {
 .container {
   width: min(1100px, calc(100% - 32px));
   margin: 0 auto;
-    padding-top: 100px;
 }
 
-  @media (max-width: 900px), (pointer: coarse) {
-    .container {
-      padding-top: 100px;
-    }
-  }
 /* ------------------------------
    Hero
 -------------------------------- */
@@ -65,11 +58,8 @@ a {
     url("https://raw.githubusercontent.com/ElliotPa1m/Webbshop-Grupp/refs/heads/feature/product-list-filter-and-sorting/img/hogwarts_legacy_HERO.webp");
 
   background-size: cover;
-  /*background-position: center;
   background-repeat: no-repeat;
 
-  /* Små visuella förbättringar */
-  filter: saturate(1.05);
 }
 
 .hero-content {
@@ -95,7 +85,6 @@ a {
 }
 
 /* ------------------------------
-   Buttons
    Button
 -------------------------------- */
 .btn {
@@ -217,7 +206,7 @@ a {
 /* ------------------------------
    Reviews
 -------------------------------- */
-.reviews {
+  .reviews {
   margin-top: 26px;
   background: var(--primary-color);
   padding: 22px 0;
@@ -233,6 +222,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  justify-content: center;
 }
 
 .review-card {
