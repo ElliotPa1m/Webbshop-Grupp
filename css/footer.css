@@ -13,7 +13,7 @@ body {
   width: 150px;
 }
 
-.button:hover {
+.button-ook:hover {
   background-color: var(--secondary-color);
 }
 
