@@ -13,7 +13,8 @@
 <body class="product-page">
     <header></header>
     <main id="product-container" class="product-container"></main>
-    <footer><section class="grid-container-ook">
+    <footer>
+           <section class="grid-container-ook">
 
         <div class="grid-div-ook">
             <img class="image-grid" src="img/pixelhuset.png" alt="logo">
@@ -42,7 +43,6 @@
     </section>
 
         <p id="copyright">© 2025 Pixelhuset. All Rights Reserved Privacy Policy Terms of Service</p>
-
 </footer>
 
     <script src="./config/products_config.js"></script>
@@ -50,4 +50,23 @@
     <script src="./loadHeader.js"></script>
     <script type="module" src="./js/product.js"></script>
 </body>
+<script>
+     document.querySelectorAll('.fa-rating').forEach(el => {
+        if (el.querySelector('i')) return;
+        const empty = document.createElement('span');
+        empty.className = 'layer empty';
+        empty.setAttribute('aria-hidden', 'true');
+        const filled = document.createElement('span');
+        filled.className = 'layer filled';
+        filled.setAttribute('aria-hidden', 'true');
+        for (let i = 0; i < 5; i++) {
+            empty.insertAdjacentHTML('beforeend', '<i class="fa-solid fa-star"></i>');
+            filled.insertAdjacentHTML('beforeend', '<i class="fa-solid fa-star"></i>');
+        }
+        el.append(empty, filled);
+        // Optional: set aria-label from CSS variable if you want
+        const r = parseFloat(getComputedStyle(el).getPropertyValue('--rating')) || 0;
+        el.setAttribute('aria-label', `Rating: ${r} out of 5`);
+    });
+</script>
 </html>

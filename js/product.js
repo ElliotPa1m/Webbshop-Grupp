@@ -20,6 +20,7 @@ const defaultRequirements = {
 
 document.addEventListener("DOMContentLoaded", () => {
     renderProductPage();
+    loadFooter();
 });
 
 function renderProductPage() {
@@ -41,28 +42,30 @@ function renderProductPage() {
 
     container.innerHTML = `
         <section class="product-grid">
-            <article class="product-card product-gallery">
-                <div class="main-image">
-                    <img src="${normalized.images[0]}" alt="${normalized.title}">
-                </div>
-                <div class="thumbnail-row">
-                    ${normalized.images.map((src, index) => `
-                        <button class="thumbnail${index === 0 ? " is-active" : ""}" data-index="${index}" aria-label="Välj bild ${index + 1}">
-                            <img src="${src}" alt="${normalized.title} bild ${index + 1}">
-                        </button>
-                    `).join("")}
-                </div>
+            <article class="product-card product-media">
+                <img class="product-image" src="${normalized.image}" alt="${normalized.title}">
             </article>
             <aside class="product-card product-info">
-                <p class="product-category">${normalized.category}</p>
-                <h1 class="product-title">${normalized.title}</h1>
-                <div class="rating-row" aria-label="Betyg ${normalized.rating} av 5">
-                    <span class="stars">${renderStars(normalized.rating)}</span>
-                    <span class="rating-text">${normalized.rating.toFixed(1)} / 5 - ${normalized.reviewCount} recensioner</span>
+                <div class="product-heading">
+                    <p class="product-genre product-category">${normalized.category}</p>
+                    <h1 class="product-title">${normalized.title}</h1>
                 </div>
-                <div class="price-card">
-                    <p class="price-tag">${normalized.price} kr</p>
-                    <button class="add-to-cart" type="button">Lägg till i varukorg</button>
+                <div class="product-rating" aria-label="Betyg ${normalized.rating} av 5">
+                                        <span class="fa-rating-row">
+                                            <span class="fa-rating" style="--rating: ${normalized.rating.toFixed(2)}" aria-label="Betyg: ${normalized.rating.toFixed(1)} av 5">
+                                                <span class="layer empty" aria-hidden="true">
+                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <span class="layer filled" aria-hidden="true">
+                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                </span>
+                                            </span>
+                                            <span class="rating-text">${normalized.rating.toFixed(1)} / 5 – ${normalized.reviewCount} recensioner</span>
+                                        </span>
+                </div>
+                <div class="product-purchase-box">
+                    <p class="product-price">${normalized.price} kr</p>
+                    <button class="buy-button" type="button">Lägg till i varukorg</button>
                 </div>
             </aside>
         </section>
@@ -88,8 +91,6 @@ function renderProductPage() {
             </article>
         </section>
     `;
-
-    wireUpThumbnails(container);
 }
 
 function resolveProductFromQuery() {
@@ -109,25 +110,21 @@ function resolveProductFromQuery() {
 function normalizeProduct(product) {
     const title = product.title || "Okänt spel";
     const category = product.category || product.genre || "Spel";
+    const image = product.image || "./img/pixelhuset.png";
 
-    const images = Array.isArray(product.images) && product.images.length
-        ? product.images
-        : [product.image, product.image, product.image].filter(Boolean);
-
-    const uniqueImages = images.filter(Boolean);
-    const paddedImages = uniqueImages.length >= 3
-        ? uniqueImages.slice(0, 3)
-        : [...uniqueImages, ...Array(Math.max(0, 3 - uniqueImages.length)).fill(uniqueImages[0] || "./img/pixelhuset.png")];
+    // Randomize rating and review count on each page load
+    const randomRating = (Math.random() * 2 + 3).toFixed(2); // 3.00 - 5.00
+    const randomReviews = Math.floor(Math.random() * 4000 + 100); // 100 - 4100
 
     return {
         title,
         category,
-        rating: typeof product.rating === "number" ? product.rating : 4.2,
-        reviewCount: product.reviewCount || 2341,
+        image,
+        rating: typeof product.rating === "number" ? product.rating : Number(randomRating),
+        reviewCount: product.reviewCount || randomReviews,
         price: product.onSalePrice || product.price || "N/A",
         description: product.description || fallbackDescription,
-        requirements: product.requirements || defaultRequirements,
-        images: [paddedImages[0], ...paddedImages.slice(0, 3)]
+        requirements: product.requirements || defaultRequirements
     };
 }
 
@@ -152,18 +149,16 @@ function renderRequirement(req) {
     `;
 }
 
-function wireUpThumbnails(container) {
-    const mainImg = container.querySelector(".main-image img");
-    const thumbnails = container.querySelectorAll(".thumbnail");
-    thumbnails.forEach((thumb) => {
-        thumb.addEventListener("click", () => {
-            const img = thumb.querySelector("img");
-            if (img && mainImg) {
-                mainImg.src = img.src;
-                thumbnails.forEach((btn) => btn.classList.remove("is-active"));
-                thumb.classList.add("is-active");
-            }
-        });
-    });
+async function loadFooter() {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+    try {
+        const response = await fetch("footer.html");
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        footer.innerHTML = doc.body.innerHTML;
+    } catch (error) {
+        footer.textContent = "Kunde inte ladda footern.";
+    }
 }
 
