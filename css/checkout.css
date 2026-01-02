@@ -5,6 +5,8 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
 }
 h2, h3 {
     margin: 0;
@@ -62,9 +64,18 @@ h1 {
     
 }
 
+
 .item-img-checkout {
     width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
 }
+.item-img-checkout:hover {
+    filter: brightness(0.8);
+}   
+
 .item-info-container {
     display: flex;
     flex-direction: row;
@@ -173,7 +184,7 @@ h1 {
 
 /* TABLET */
 @media screen and (max-width: 1024px) {
-    section {
+    .checkout-section {
         padding: var(--spacing-md);
     }
     h2 {
@@ -200,8 +211,8 @@ h1 {
 
 
 /* MOBILE */
-@media screen and (max-width: 430px) {
-    .grid-container {
+@media screen and (max-width: 700px) {
+    .grid-container-checkout {
         grid-template-columns: 1fr;
     }
     .item-container {

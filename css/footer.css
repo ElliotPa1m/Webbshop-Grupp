@@ -23,6 +23,7 @@ body {
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 0px;
+  padding-top: calc(var(--spacing-xl) + var(--spacing-md));
 }
 
 .grid-div-ook {
