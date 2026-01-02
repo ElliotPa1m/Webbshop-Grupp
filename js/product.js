@@ -20,7 +20,6 @@ const defaultRequirements = {
 
 document.addEventListener("DOMContentLoaded", () => {
     renderProductPage();
-    loadFooter();
 });
 
 function renderProductPage() {
@@ -130,17 +129,6 @@ function normalizeProduct(product) {
     };
 }
 
-function renderStars(rating) {
-    const fullStars = Math.floor(rating);
-    const hasHalf = rating - fullStars >= 0.5;
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-        if (i < fullStars) stars.push('<i class="fa-solid fa-star"></i>');
-        else if (i === fullStars && hasHalf) stars.push('<i class="fa-regular fa-star-half-stroke"></i>');
-        else stars.push('<i class="fa-regular fa-star"></i>');
-    }
-    return stars.join("");
-}
 
 function renderRequirement(req) {
     return `
@@ -149,18 +137,5 @@ function renderRequirement(req) {
             <span>${req.value}</span>
         </li>
     `;
-}
-
-async function loadFooter() {
-    const footer = document.querySelector("footer");
-    if (!footer) return;
-    try {
-        const response = await fetch("footer.html");
-        const html = await response.text();
-        const doc = new DOMParser().parseFromString(html, "text/html");
-        footer.innerHTML = doc.body.innerHTML;
-    } catch (error) {
-        footer.textContent = "Kunde inte ladda footern.";
-    }
 }
 
