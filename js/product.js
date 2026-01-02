@@ -46,26 +46,28 @@ function renderProductPage() {
                 <img class="product-image" src="${normalized.image}" alt="${normalized.title}">
             </article>
             <aside class="product-card product-info">
-                <div class="product-heading">
-                    <p class="product-genre product-category">${normalized.category}</p>
-                    <h1 class="product-title">${normalized.title}</h1>
+                <div class="product-header-wrapper">
+                    <div class="product-heading">
+                        <p class="product-genre product-category">${normalized.category}</p>
+                        <h1 class="product-title">${normalized.title}</h1>
+                    </div>
+                    <div class="product-rating" aria-label="Betyg ${normalized.rating} av 5">
+                    <span class="fa-rating-row">
+                        <span class="fa-rating" style="--rating: ${normalized.rating.toFixed(2)}" aria-label="Betyg: ${normalized.rating.toFixed(1)} av 5">
+                            <span class="layer empty" aria-hidden="true">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="layer filled" aria-hidden="true">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </span>
+                        </span>
+                        <span class="rating-text">${normalized.rating.toFixed(1)} / 5 – ${normalized.reviewCount} recensioner</span>
+                    </span>
                 </div>
-                <div class="product-rating" aria-label="Betyg ${normalized.rating} av 5">
-                                        <span class="fa-rating-row">
-                                            <span class="fa-rating" style="--rating: ${normalized.rating.toFixed(2)}" aria-label="Betyg: ${normalized.rating.toFixed(1)} av 5">
-                                                <span class="layer empty" aria-hidden="true">
-                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                                </span>
-                                                <span class="layer filled" aria-hidden="true">
-                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                                </span>
-                                            </span>
-                                            <span class="rating-text">${normalized.rating.toFixed(1)} / 5 – ${normalized.reviewCount} recensioner</span>
-                                        </span>
                 </div>
-                <div class="product-purchase-box">
-                    <p class="product-price">${normalized.price} kr</p>
-                    <button class="buy-button" type="button">Lägg till i varukorg</button>
+                <div class="price-card">
+                    <div class="price-card__price">${normalized.price} kr</div>
+                    <button class="price-card__cta" type="button">Lägg till i varukorg</button>
                 </div>
             </aside>
         </section>
