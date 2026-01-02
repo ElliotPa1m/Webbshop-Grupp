@@ -11,9 +11,14 @@
 </head>
 <body>
     <header></header>
-    <div class="main-container">
+    <main class="main-container">
         <h1>Våra produkter</h1>
-        <div class="sorting-search-section"></div>
+        <div class="sorting-search-section">
+            <button id="filter-sorting-btn" class="filter-sorting-btn">Filter & sortering ⇾
+                <span class="tooltiptext">Klicka för att öppna filtrering & sortering.</span>
+            </button>
+            <input type="search" id="products-list-search" name="products-list" placeholder="Sök produkter..." />
+        </div>
         <div class="product-list">
             <!--
             This is how the product cards are created.
@@ -33,18 +38,65 @@
                 </span>
             </div> -->
         </div>
-    </div>
-        
+    </main>
 
-    <script src="./config/products_config.js"></script>
-    <script src="./js/products.js"></script>
-    <footer>
-            <section class="grid-container">
-
-        <div class="grid-div">
-            <img class="image-grid" src="img/pixelhuset.png" alt="logo">
+    <section class="filter-modal">
+        <div class="filter-modal-header">
+            <h2>Filter & sortering</h2>
+            <button id="close-btn" class="close-btn"></button>
         </div>
-        
+        <div class="filter-modal-body">
+            <label for="sorting">Sortera</label>
+            <select id="sorting" class="sorting">
+                <option value="default">---</option>
+                <option value="price-asc">Pris: Lågt till högt</option>
+                <option value="price-desc">Pris: Högt till lågt</option>
+                <option value="name-asc">Namn: A till Ö</option>
+                <option value="name-desc">Namn: Ö till A</option>
+            </select>
+            <br/>
+            <label>Kategorier</label>
+            <div class="category-checkboxes" id="category-checkboxes">
+                <!--
+                This is how the checkboxes are being generated.
+                They are generated from the config, which is where I first check for which categories that exists and then put them inside here.
+
+                <label class="category-checkbox">
+                    <input type="checkbox" value="Action" checked=true><span>This is the text</span>
+                </label>
+                -->
+                <!-- Probably best to insert categories based on the products in config (js)? -->
+            </div>
+            <br/>
+            <label>Prisintervall</label>
+            <div class="price-range-container">
+                <div class="dual-slider">
+                    <input type="range" id="price-min" min="0" step="1" value="1">
+                    <input type="range" id="price-max" min="0" step="1">
+                    <div class="track"></div>
+                    <div class="range-fill"></div>
+                </div>
+                <div class="price-range-values">
+                    <span id="price-min-value">0 kr</span> – <span id="price-max-value"></span>
+                </div>
+            </div>
+            <br/>
+            <label>Rea</label>
+            <label class="sale">
+                <input type="checkbox" id="sale-only">
+                Visa endast produkter på rea
+            </label>
+        </div>
+    </section>
+
+    <div id="overlay" class="overlay"></div>
+
+    <footer>
+        <section class="grid-container">
+            <div class="grid-div">
+                <img class="image-grid" src="img/pixelhuset.png" alt="logo">
+            </div>
+
             <div class="grid-div">
                 <a href="om-oss-kontakt.html">
                     <button id="button1" class="button">Om Oss</button>
@@ -57,21 +109,18 @@
                 </a>
             </div>
 
-
-        <div class="social-buttons grid-div">
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-        
-
-    </section>
-
+            <div class="social-buttons grid-div">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </section>
         <p id="copyright">© 2025 Pixelhuset. All Rights Reserved Privacy Policy Terms of Service</p>
-
+    </footer>
     <script src="https://kit.fontawesome.com/d6c4cb3330.js" crossorigin="anonymous"></script>
-        </footer>
     <script src="headerBehavior.js"></script>
-    <script src="loadHeader.js"></script> 
+    <script src="loadHeader.js"></script>
+    <script src="./config/products_config.js"></script>
+    <script src="./js/products.js"></script>
 </body>
 </html>
