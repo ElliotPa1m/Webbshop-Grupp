@@ -219,7 +219,7 @@ a {
 -------------------------------- */
 .reviews {
   margin-top: 26px;
-  background: #2f3339;
+  background: var(--primary-color);
   padding: 22px 0;
 }
 
