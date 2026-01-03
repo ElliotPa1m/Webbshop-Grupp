@@ -9,11 +9,6 @@ header {
   height: 100px;
 }
 
-/* Prevent content from being hidden behind fixed header */
-body {
-  padding-top: 160px;
-}
-
 header #header-container {
   display: flex;
   align-items: center;
@@ -475,9 +470,10 @@ header .mobile-discover-list a:hover {
   border-color: color-mix(in srgb, var(--accent-color) 50%, transparent);
   transform: translateY(-1px);
 }
+
 @media (max-width: 900px), (pointer: coarse) {
   body {
-    padding-top: 70px; /* Adjusted for smaller mobile header */
+    padding-top: 72px; /* Adjusted for smaller mobile header */
   }
   header {
     height: auto;
