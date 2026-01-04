@@ -20,11 +20,27 @@ body {
     gap: 20px;
 }
 
+.price-card__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
 .price-card__price {
     font-size: 2.4rem;
     font-weight: 800;
     color: var(--text-color);
     letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.price-card__original-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-decoration: line-through;
+    opacity: 0.6;
     margin: 0;
 }
 
@@ -182,6 +198,13 @@ body.product-page {
     height: 100%;
 }
 
+.product-image-wrapper {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
 .product-image {
     max-height: 500px;
     max-width: 100%;
@@ -191,14 +214,29 @@ body.product-page {
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
     display: block;
-    margin: 0 auto;
 }
 
-/* Header wrapper: unified spacing for genre → title → rating hierarchy */
+.sale-banner {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    background: linear-gradient(135deg, #00607a 0%, #004d61 100%);
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    padding: 8px 60px;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    text-align: center;
+}
+
+/* Header wrapper */
 .product-header-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Spacing between heading and rating (separate content block) */
+    gap: 16px;
     margin-bottom: 20px;
 }
 
@@ -206,7 +244,7 @@ body.product-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px; /* Tight spacing between genre label and title (label association) */
+    gap: 8px;
     text-align: center;
 }
 
