@@ -1,5 +1,4 @@
 /* ------------------------------
-   Bas
    Base
 -------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -30,14 +29,8 @@ a {
 .container {
   width: min(1100px, calc(100% - 32px));
   margin: 0 auto;
-    padding-top: 100px;
 }
 
-  @media (max-width: 900px), (pointer: coarse) {
-    .container {
-      padding-top: 100px;
-    }
-  }
 /* ------------------------------
    Hero
 -------------------------------- */
@@ -65,11 +58,8 @@ a {
     url("https://raw.githubusercontent.com/ElliotPa1m/Webbshop-Grupp/refs/heads/feature/product-list-filter-and-sorting/img/hogwarts_legacy_HERO.webp");
 
   background-size: cover;
-  /*background-position: center;
   background-repeat: no-repeat;
 
-  /* Små visuella förbättringar */
-  filter: saturate(1.05);
 }
 
 .hero-content {
@@ -95,7 +85,6 @@ a {
 }
 
 /* ------------------------------
-   Buttons
    Button
 -------------------------------- */
 .btn {
@@ -144,8 +133,13 @@ a {
   display: grid;
   place-items: center;
   box-shadow: var(--shadow);
+    filter: brightness(1.0);
+  transition: filter 0.3s ease-in-out;
 }
 
+.promo:hover {
+    filter: brightness(0.8);
+}
 .promo-title {
   margin: 0;
   text-align: center;
@@ -196,30 +190,40 @@ a {
   aspect-ratio: 4 / 5;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.0);
+  transition: filter 0.3s ease-in-out;
 }
 
+.thumb:hover {
+  filter: brightness(1.2);
+}
 .game-meta {
   padding-top: 10px;
 }
 
 .game-title {
   margin: 0 0 6px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 800;
 }
 
-.game-info {
+.game-genre {
   margin: 0;
-  color: var(--text);
+  color: var(--secondary-color);
   font-size: 0.9rem;
+}
+
+.game-price {
+  margin: 0;
+  font-size: 1rem;
 }
 
 /* ------------------------------
    Reviews
 -------------------------------- */
-.reviews {
+  .reviews {
   margin-top: 26px;
-  background: #2f3339;
+  background: var(--primary-color);
   padding: 22px 0;
 }
 
@@ -233,6 +237,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  justify-content: center;
 }
 
 .review-card {
@@ -242,7 +247,7 @@ a {
 }
 
 .stars {
-  color: var(--accent-color);
+  color: var(--accent-color-bright);
   font-size: 1.1rem;
   letter-spacing: 2px;
 }

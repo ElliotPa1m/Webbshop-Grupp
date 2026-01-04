@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>footer</title>
+    <title>Produktdetaljer | Pixelhuset</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://kit.fontawesome.com/d6c4cb3330.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <section class="grid-container-ook">
+<body class="product-page">
+    <header></header>
+    <main id="product-container" class="product-container"></main>
+    <footer>
+           <section class="grid-container-ook">
 
         <div class="grid-div-ook">
             <img class="image-grid" src="img/pixelhuset.png" alt="logo">
@@ -39,8 +43,10 @@
     </section>
 
         <p id="copyright">© 2025 Pixelhuset. All Rights Reserved Privacy Policy Terms of Service</p>
+</footer>
 
-    <script src="https://kit.fontawesome.com/d6c4cb3330.js" crossorigin="anonymous"></script>
-
+    <script src="./config/products_config.js"></script>
+    <script src="./js/header.js"></script>
+    <script type="module" src="./js/product.js"></script>
 </body>
 </html>

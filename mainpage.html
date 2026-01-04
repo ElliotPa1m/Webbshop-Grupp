@@ -11,107 +11,7 @@
 </head>
 <body>
   <!-- HEADER -->
-    <header>
-      <div id="header-container">
-    <a href="/" id="logo">
-        <img src="img/PixelhusetLogo-cropped.svg" alt="Pixelhuset logo" />
-    </a>
-    <nav aria-label="Huvudnavigering">
-        <ul class="main-nav">
-            <li class="dropdown">
-                <a href="/products.html" class="dropdown-toggle">Upptäck spel</a>
-                <div class="dropdown-menu">
-                    <div class="dropdown-items">
-                        <a href="#"><strong>Populära</strong></a>
-                        <a href="#"><strong>Nya Spel</strong></a>
-                        <a href="#">Action</a>
-                        <a href="#">Äventyr</a>
-                        <a href="#">Rollspel (RPG)</a>
-                        <a href="#">Strategi</a>
-                        <a href="#">Sport</a>
-                        <a href="#">Racing</a>
-                        <a href="#">Simulering</a>
-                        <a href="#">Plattform</a>
-                        <a href="#">Skräck</a>
-                        <a href="#">Pussel</a>
-                        <a href="#">Familj</a>
-                        <a href="#">Indie</a>
-                        <a href="#">Multiplayer</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div id="header-actions">
-        <div class="search-bar">
-            <input type="text" placeholder="Sök produkter..." class="search-input" />
-            <button class="search-btn" aria-label="Sök">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
-                    <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-        </div>
-        <button class="kassa-btn" onclick="location.href='/checkout.html'">Kassa</button>
-        <button type="button" class="hamburger-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</div>
-<div id="mobile-menu" class="mobile-menu" hidden aria-hidden="true">
-    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Mobilmeny" tabindex="-1">
-        <div class="mobile-menu__top">
-            <div class="mobile-menu__meta">
-                <span class="mobile-menu__eyebrow">Pixelhuset</span>
-                <p class="mobile-menu__title">Hitta nya spel</p>
-            </div>
-            <button type="button" class="mobile-close-btn" aria-label="St�ng meny">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </button>
-        </div>
-        <div class="mobile-search-row">
-            <div class="search-bar mobile-search">
-                <input type="text" placeholder="Sök produkter..." class="search-input" />
-                <button class="search-btn" aria-label="Sök">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
-                        <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <line x1="14.2" y1="14.2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <nav class="mobile-nav" aria-label="Mobil navigation">
-            <p class="mobile-nav-note">Bläddra bland genrer eller använd söket.</p>
-            <div class="mobile-discover-row">
-                <a href="/produkter" class="mobile-discover-link">Upptäck spel</a>
-                <button type="button" class="mobile-discover-toggle" aria-expanded="false" aria-controls="mobile-discover-list" aria-label="Visa genrer">
-                    <span class="chevron" aria-hidden="true"></span>
-                </button>
-            </div>
-            <ul id="mobile-discover-list" class="mobile-discover-list" hidden>
-                <li><a href="#"><strong>Populära</strong></a></li>
-                <li><a href="#"><strong>Nya Spel</strong></a></li>
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Äventyr</a></li>
-                <li><a href="#">Rollspel (RPG)</a></li>
-                <li><a href="#">Strategi</a></li>
-                <li><a href="#">Sport</a></li>
-                <li><a href="#">Racing</a></li>
-                <li><a href="#">Simulering</a></li>
-                <li><a href="#">Plattform</a></li>
-                <li><a href="#">Skräck</a></li>
-                <li><a href="#">Pussel</a></li>
-                <li><a href="#">Familj</a></li>
-                <li><a href="#">Indie</a></li>
-                <li><a href="#">Multiplayer</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
-    </header>
+    <header></header>
     <main>
 
       <!-- HERO -->
@@ -125,7 +25,7 @@
               Lev dig in i ett open-world action-RPG där du står i centrum för ett äventyr i denna
               förtrollade värld.
             </p>
-            <a class="btn btn-accent" href="#">Läs mer</a>
+            <a class="btn btn-accent" href="product.html">Läs mer</a>
           </div>
         </div>
       </section>
@@ -147,58 +47,82 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <h2 class="section-title">Upptäck något nytt &gt;</h2>
+            <h2 class="section-title">
+              <a href="products.html">Upptäck något nytt &gt;</a>
+            </h2>
           </div>
 
           <div class="cards-grid">
-            <article class="game-card">
-              <img
-                class="thumb"
-                src="https://cdn1.epicgames.com/offer/a14a02aa3c8143729605eaf7c93d7501/EGS_Battlefield6_BattlefieldStudios_S2_1200x1600-a88625a836120c55650c83d17a010c25?resize=1&w=360&h=480&quality=medium"
-                 alt="Omslagsbild för spelet Battlefield 6"/>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/arc-raiders.webp"
+                  alt="Omslagsbild för spelet Arc Raiders"/>
 
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
+                <div class="game-meta">
+                  <h3 class="game-title">Arc Raiders</h3>
+                  <p class="game-genre">Action</p>
+                  <p class="game-price">299 kr</p>
+                </div>
+              </article>
+            </a>
+
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/ark-survival-ascended.webp"
+                   alt="Omslagsbild för spelet Ark: Survival Ascended"/>
+                <div class="game-meta">
+                <h3 class="game-title">Ark: Survival Ascended</h3>
+                <p class="game-genre">Adventure</p>
+                <p class="game-price">499 kr</p>
               </div>
             </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/battlefield-1.webp"
+                  alt="Omslagsbild för spelet Battlefield 1"/>
+                <div class="game-meta">
+                  <h3 class="game-title">Battlefield 1</h3>
+                  <p class="game-genre">Action</p>
+                  <p class="game-price">499 kr</p>
+                </div>
+              </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/bloodstained.webp"
+                  alt="Omslagsbild för spelet Bloodstained"/>
+                <div class="game-meta">
+                  <h3 class="game-title">Bloodstained</h3>
+                  <p class="game-genre">RPG</p>
+                  <p class="game-price">245 kr</p>
+                </div>
+              </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
-
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/borderlands4.webp"
+                  alt="Omslagsbild för spelet Borderlands 4"/>
+                <div class="game-meta">
+                  <h3 class="game-title">Borderlands 4</h3>
+                  <p class="game-genre">Action</p>
+                  <p class="game-price">299 kr</p>
+                </div>
+              </article>
+            </a>
           </div>
         </div>
       </section>
@@ -207,54 +131,81 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <h2 class="section-title">Populärt &gt;</h2>
+            <h2 class="section-title">
+              <a href="products.html">Populärt &gt;</a>
+            </h2>
           </div>
 
           <div class="cards-grid">
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/bornless.webp"
+                  alt="Omslagsbild för spelet Bornless"/>
+                <div class="game-meta">
+                  <h3 class="game-title">Bornless</h3>
+                  <p class="game-genre">Horror</p>
+                  <p class="game-price">459 kr</p>
+                </div>
+              </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/fc26.webp"
+                  alt="Omslagsbild för spelet EA Sports FC 26"/>
+                <div class="game-meta">
+                  <h3 class="game-title">EA Sports FC 26</h3>
+                  <p class="game-genre">Sport</p>
+                  <p class="game-price">499 kr</p>
+                </div>
+              </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/gtav.webp"
+                  alt="Omslagsbild för spelet GTA V"/>
+                <div class="game-meta">
+                  <h3 class="game-title">GTA V</h3>
+                  <p class="game-genre">Action</p>
+                  <p class="game-price">299 kr</p>
+                </div>
+              </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/hadesii.webp"
+                  alt="Omslagsbild för spelet Hades II"/>
+                <div class="game-meta">
+                  <h3 class="game-title">Hades II</h3>
+                  <p class="game-genre">RPG</p>
+                  <p class="game-price">299 kr</p>
+                </div>
+              </article>
+            </a>
 
-            <article class="game-card">
-              <div class="thumb"></div>
-              <div class="game-meta">
-                <h3 class="game-title">Speltitel</h3>
-                <p class="game-info">Genre</p>
-                <p class="game-info">Pris</p>
-              </div>
-            </article>
+            <a href="product.html">
+              <article class="game-card">
+                <img
+                  class="thumb"
+                  src="img/products/hogwartslegacy.webp"
+                  alt="Omslagsbild för spelet Hogwarts Legacy"/>
+                <div class="game-meta">
+                  <h3 class="game-title">Hogwarts Legacy</h3>
+                  <p class="game-genre">RPG</p>
+                  <p class="game-price">349 kr</p>
+                </div>
+              </article>
+            </a>
           </div>
         </div>
       </section>
@@ -292,19 +243,19 @@
        <footer>
         <section class="grid-container-ook">
 
-        <div class="grid-div">
+        <div class="grid-div-ook">
             <img class="image-grid" src="img/pixelhuset.png" alt="logo">
         </div>
         
             <div class="grid-div-ook">
                 <a href="om-oss-kontakt.html">
-                    <button id="button1" class="button">Om Oss</button>
+                    <button id="button1" class="button-ook">Om Oss</button>
                 </a>
             </div>
 
             <div class="grid-div-ook">
                 <a href="om-oss-kontakt.html">
-                    <button id="button2" class="button">Kontakta Oss</button>
+                    <button id="button2" class="button-ook">Kontakta Oss</button>
                 </a>
             </div>
 
@@ -324,7 +275,6 @@
     </footer>  
     </main>
 
-    <script src="loadHeader.js"></script>
-    <script src="headerBehavior.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
