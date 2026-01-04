@@ -31,6 +31,7 @@ input {
 
 .checkout-section{
     display: grid;
+    padding-bottom: 50px;
 }
 
 .grid-container-checkout {
@@ -164,19 +165,29 @@ h1 {
 }
 
 .checkout-button {
-    background-color: var(--accent-color);
-    color: white;
-    padding: var(--spacing-md);
-    font-size: var(--font-size-md);
-    font-weight: bold;
+    background: var(--accent-color);
+    color: var(--text-color);
+    font-size: 1.05rem;
+    font-family: var(--font-family);
+    font-weight: 700;
     border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0, 96, 122, 0.3), 0 0 16px 0 rgba(0, 96, 122, 0.35);
+    letter-spacing: 0.03em;
     cursor: pointer;
+    padding: 13px 40px;
+    margin: 0;
+    transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease, filter 0.18s ease;
+    outline: none;
     width: 100%;
-    transition: 200ms;
 }
 .checkout-button:hover {
-    background-color: var(--primary-color);
+    background: var(--accent-color);
+    filter: brightness(1.15);
+    box-shadow: 0 4px 16px 0 rgba(0, 96, 122, 0.5), 0 0 24px 0 rgba(0, 96, 122, 0.55);
+    transform: translateY(-1px);
 }
+
 
 .border-radius {
     border-radius: 10px;
