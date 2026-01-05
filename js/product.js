@@ -42,7 +42,10 @@ function renderProductPage() {
     container.innerHTML = `
         <section class="product-grid">
             <article class="product-card product-media">
-                <img class="product-image" src="${normalized.image}" alt="${normalized.title}">
+                <div class="product-image-wrapper">
+                    ${normalized.onSale ? '<div class="sale-banner">REA</div>' : ''}
+                    <img class="product-image" src="${normalized.image}" alt="${normalized.title}">
+                </div>
             </article>
             <aside class="product-card product-info">
                 <div class="product-header-wrapper">
@@ -65,7 +68,10 @@ function renderProductPage() {
                 </div>
                 </div>
                 <div class="price-card">
-                    <div class="price-card__price">${normalized.price} kr</div>
+                    <div class="price-card__prices">
+                        <div class="price-card__price">${normalized.price} kr</div>
+                        ${normalized.onSale ? `<div class="price-card__original-price">${normalized.originalPrice} kr</div>` : ''}
+                    </div>
                     <button class="price-card__cta" type="button">Lägg till i varukorg</button>
                 </div>
             </aside>
@@ -124,6 +130,8 @@ function normalizeProduct(product) {
         rating: typeof product.rating === "number" ? product.rating : Number(randomRating),
         reviewCount: product.reviewCount || randomReviews,
         price: product.onSalePrice || product.price || "N/A",
+        originalPrice: product.price,
+        onSale: !!product.onSalePrice,
         description: product.description || fallbackDescription,
         requirements: product.requirements || defaultRequirements
     };
