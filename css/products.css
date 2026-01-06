@@ -35,41 +35,41 @@ body {
 }
 
 .tooltiptext {
-  visibility: hidden;
-  width: max-content;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px;
-  position: absolute;
-  z-index: 1;
-  bottom: 80%;
-  left: 50%;
-  margin-left: -50%;
+    visibility: hidden;
+    width: max-content;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    margin-left: -50%;
 }
 
 .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 25%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }
 
 .filter-sorting-btn:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
 }
 
 .filter-modal {
     position: fixed;
     top: 0;
-    right: -33vw;
+    right: calc(-33% - 20px);
     height: 100%;
-    width: 33vw;
+    width: 33%;
     max-width: 500px;
     padding: 20px;
     background-color: var(--background-color);
