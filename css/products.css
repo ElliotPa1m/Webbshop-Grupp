@@ -6,7 +6,7 @@ body {
 
 .main-container {
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
     padding: 20px;
 }
 
@@ -14,10 +14,42 @@ body {
     font-weight: 900;
 }
 
+@media (max-width: 767px) {
+    .main-container h1 {
+        text-align: center;
+    }
+
+    .sorting-search-section {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    #products-list-search {
+        margin: 0 auto;
+    }
+
+    .filter-sorting-btn {
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-container {
+        width: 75%;
+    }
+}
+
 .sorting-search-section {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .filter-sorting-btn {
@@ -35,41 +67,41 @@ body {
 }
 
 .tooltiptext {
-  visibility: hidden;
-  width: max-content;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px;
-  position: absolute;
-  z-index: 1;
-  bottom: 80%;
-  left: 50%;
-  margin-left: -50%;
+    visibility: hidden;
+    width: max-content;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    text-align: center;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    margin-left: -50%;
 }
 
 .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 25%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }
 
 .filter-sorting-btn:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
 }
 
 .filter-modal {
     position: fixed;
     top: 0;
-    right: -33vw;
+    right: calc(-33% - 40px);
     height: 100%;
-    width: 33vw;
+    width: 33%;
     max-width: 500px;
     padding: 20px;
     background-color: var(--background-color);
@@ -86,8 +118,8 @@ body {
 
 @media (max-width: 900px) {
     .filter-modal {
-        width: 80vw;
-        right: -80vw
+        width: calc(100% - 40px);
+        right: calc(-100% - 40px);
     }
 
     .filter-modal.active {
@@ -147,7 +179,7 @@ body {
 
 .filter-modal-header .close-btn:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+    box-shadow: var(--shadow);
 }
 
 .filter-modal-body {
@@ -155,18 +187,18 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--spacing-sm);
 }
 
 .filter-modal-body label {
-    font-size: 18px;
+    font-size: var(--font-size-md);
 }
 
 .filter-modal-body select {
-    padding: 12px;
+    padding: var(--spacing-sm);
     background-color: transparent;
     color: var(--text-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     border: 1px solid var(--secondary-color);
     cursor: pointer;
 }
@@ -180,7 +212,7 @@ body {
 .category-checkboxes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--spacing-sm);
 }
 
 .category-checkbox {
@@ -191,7 +223,7 @@ body {
 }
 
 .category-checkbox span {
-    font-size: 16px;
+    font-size: var(--font-size-sm);
 }
 
 .category-checkbox input[type="checkbox"] {
@@ -204,7 +236,7 @@ body {
 }
 
 .filter-modal-body .sale {
-    font-size: 16px;
+    font-size: var(--font-size-sm);
 }
 
 .sale input[type="checkbox"] {
@@ -237,7 +269,7 @@ body {
     border-radius: 50%;
     background: var(--secondary-color);
     border: 2px solid var(--text-color);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: var(--shadow);
     cursor: grab;
     -webkit-appearance: none;
     margin-top: -10px;
@@ -251,7 +283,7 @@ body {
     border-radius: 50%;
     background: var(--secondary-color);
     border: 2px solid var(--text-color);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: var(--shadow);
     cursor: grab;
     z-index: 20;
 }
@@ -263,7 +295,7 @@ body {
     width: 100%;
     height: 8px;
     background: #ddd;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     transform: translateY(-50%);
     z-index: 1;
 }
@@ -274,7 +306,7 @@ body {
     left: 0;
     height: 8px;
     background: var(--accent-color);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     transform: translateY(-50%);
     z-index: 2;
     pointer-events: none;
@@ -307,24 +339,23 @@ body {
   width: 100%;
   max-width: 300px;
   padding: 14px 20px 14px 45px;
-  font-size: 16px;
+  font-size: var(--font-size-sm);
   border-radius: 50px;
   border: 1px solid #e0e0e0;
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 18px center;
   outline: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow);
 }
 
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
     overflow-y: auto;
-    padding: 10px 0;
+    padding: var(--spacing-sm) 0;
 }
 
-/* Have to add more media queries later on. This is just for testing purposes atm */
 @media (min-width: 1400px) {
     .product-list {
         grid-template-columns: repeat(5, 1fr);
@@ -343,19 +374,19 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border-radius: 10px;
+    gap: var(--spacing-sm);
+    border-radius: var(--border-radius);
     cursor: pointer;
 }
 
 .product-item h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: var(--font-size-md);
 }
 
 .product-item p {
     margin: 0;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--secondary-color);
 }
 
@@ -366,19 +397,19 @@ body {
 .product-item .image-container {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow);
 }
 
 .product-item img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     filter: brightness(1.0);
     transition: filter 0.3s ease-in-out;
 }
